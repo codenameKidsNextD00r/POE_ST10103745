@@ -40,12 +40,15 @@ namespace POE_ST10103745
             MainWindow main = new MainWindow();
             string moduleName = main.TB_ModuleName.Text;
             string moduleCode = main.TB_ModuleCode.Text;
-            string credits = main.TB_Credits.Text;
-            string hours = main.TB_Hours.Text;
+            //int credits = Convert.ToInt16(main.TB_Credits.Text);
+            //double hours = Convert.ToDouble(main.TB_Credits.Text);
+            //string credits = main.TB_Credits.Text;
+            //string hours = main.TB_Hours.Text;
+
 
             //Process
-            dataStorage storage = new dataStorage(moduleName, moduleCode, credits, hours);
-            MessageBox.Show(storage.ToString());
+            //dataStorage storage = new dataStorage(moduleName, moduleCode, credits, hours);
+            //MessageBox.Show(storage.ToString());
         }
     }
 }

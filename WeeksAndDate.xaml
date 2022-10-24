@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="WeeksAndDate" Height="450" Width="800">
     <Grid>
+        <GroupBox Header="Semester Details" Margin="94,50,94,50"/>
         <Label Content="Number Of Weeks In Semester:" HorizontalAlignment="Left" Margin="181,142,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TB_Weeks" HorizontalAlignment="Left" Margin="400,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="22"/>
         <Label Content="Start Date:" HorizontalAlignment="Left" Margin="291,217,0,0" VerticalAlignment="Top"/>

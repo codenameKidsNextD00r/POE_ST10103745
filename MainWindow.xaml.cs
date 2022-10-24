@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Schema;
 
 namespace POE_ST10103745 //Part 1
 {
@@ -20,6 +21,11 @@ namespace POE_ST10103745 //Part 1
     /// </summary>
     public partial class MainWindow : Window
     {
+        //variable declaration
+        public string moduleName, moduleCode;
+        public int credits;
+        public double hours;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,32 +40,62 @@ namespace POE_ST10103745 //Part 1
         private void BTN_Next_Click(object sender, RoutedEventArgs e)
         {
             //Declarations first
-            string moduleName = TB_ModuleName.Text;
-            string moduleCode = TB_ModuleCode.Text;
-            string credits = TB_Credits.Text;
-            string hours = TB_Hours.Text;
+            moduleName = TB_ModuleName.Text;
+            moduleCode = TB_ModuleCode.Text;
+            credits = 0;
+            hours = 0;
+            
+
 
             //Validation
+            //exciption handling for textbox to int conversion
+
             if (string.IsNullOrWhiteSpace(moduleName) ||
                 string.IsNullOrWhiteSpace(moduleCode) ||
-                string.IsNullOrWhiteSpace(credits) ||
-                string.IsNullOrWhiteSpace(hours))
+                !Int32.TryParse(TB_Credits.Text, out credits) ||
+                !Double.TryParse(TB_Hours.Text, out hours)
+               )
+
             {
-               
-                MessageBox.Show("All fields must be filled to continue!");
+                MessageBox.Show("All fields must be filled in correctly to continue!");
             }
-            
+
             else
             {
-
                 WeeksAndDate weeksAndDate = new WeeksAndDate();//object created for new window
                 this.Hide();//hide current window
                 weeksAndDate.Show(); //show new window
             }
 
-            //Process
-            //dataStorage storage = new dataStorage(moduleName, moduleCode, credits, hours);
-            //MessageBox.Show(storage.ToString());
+        //Process
+        //dataStorage storage = new dataStorage(moduleName, moduleCode, credits, hours);
+        //MessageBox.Show(storage.ToString());
+            
+        }
+
+        private void BTN_Add_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (string.IsNullOrWhiteSpace(moduleName) ||
+                string.IsNullOrWhiteSpace(moduleCode) ||
+                !Int32.TryParse(TB_Credits.Text, out credits) ||
+                !Double.TryParse(TB_Hours.Text, out hours)
+                )
+
+            {
+                MessageBox.Show("Please input module details first");
+            }
+
+            else 
+            {
+                MessageBox.Show("Module Successfully Added.");
+            }
+
+            //Clearing input data
+            TB_ModuleName.Clear();
+            TB_ModuleCode.Clear();
+            TB_Hours.Clear();
+            TB_Credits.Clear();
 
 
         }
