@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="display.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="sign_up.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="startup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WeeksAndDate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="display.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="sign_up.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="startup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WeeksAndDate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
