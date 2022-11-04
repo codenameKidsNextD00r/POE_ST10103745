@@ -1,0 +1,28 @@
+﻿<Window x:Class="POE_ST10103745.sign_up"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/" 
+        
+        xmlns:local="clr-namespace:POE_ST10103745"
+        mc:Ignorable="d"
+        Title="sign_up" Height="450" Width="800">
+    <Grid>
+        <GroupBox Header="Sign Up" Margin="90,53,78,57"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="253,93,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Margin="406,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="231,148,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_username" HorizontalAlignment="Left" Margin="406,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="259,197,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_email" HorizontalAlignment="Left" Margin="406,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="238,236,0,0" VerticalAlignment="Top"/>
+        <Label Content="Confirm Password:" HorizontalAlignment="Left" Margin="192,282,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="tb_password" HorizontalAlignment="Left" Margin="406,236,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="tb_passwordConfirm" HorizontalAlignment="Left" Margin="406,282,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_Back" Content="Back" HorizontalAlignment="Left" Margin="466,335,0,0" VerticalAlignment="Top" Height="20" Width="50" Click="btn_Back_Click"/>
+        <Button x:Name="btn_SubmitRegister" Content="Submit" HorizontalAlignment="Left" Margin="381,335,0,0" VerticalAlignment="Top" Height="20" Width="50" Click="btn_SubmitRegister_Click"/>
+        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Margin="303,335,0,0" VerticalAlignment="Top" Height="20" Width="50" Click="btn_Exit_Click"/>
+
+    </Grid>
+</Window>
